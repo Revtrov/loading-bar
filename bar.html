@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+html{
+background:linear-gradient(to bottom right, orange, brown);
+}
+h1{
+
+}
+div{
+font-family:times new roman;
+text-align:center;
+margin:3.5%;
+position:absolute;
+width:90%;
+min-height:90%;
+height:90%;
+background-color:white;
+border-radius:40px;
+box-shadow: 2px 2px 8px rgba( 0, 0, 0, 1 );
+}
+progress {
+border-radius: 5px; 
+width: 80%;
+height: 22px;
+box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+progress::-webkit-progress-bar {
+background-color: white;
+border-radius: 7px;
+}
+progress::-webkit-progress-value {
+background: linear-gradient(to top right, green, lightgreen, green);
+border-radius: 5px;
+box-shadow: 1px 1px 4px 2px green;
+}
+progress::-moz-progress-bar {
+}
+img{
+opacity:0%;
+border-radius:50px;
+width:300px;
+height:600px;
+}
+</style>
+</head>
+<body>
+<div>
+<h1 id="h11"> Loading</h1>
+<h1 id ="h1">
+<progress id="bar" min="0" max="100" value="0">
+</progress>
+</h1>
+<h2 id="h2"></h2>
+<h2 id="h3"></h2>
+<br><br><br><br>
+<img id="gif">
+<br>
+<br>
+<h1 id="adam"></h1>
+</div>
+<script>
+var a = 0;
+var b = 0;
+var myvar =  window.setInterval(myFunction , 70);
+function myFunction(){
+if(b == 69){
+document.getElementById("h3").innerHTML = "nice";
+}
+if (b != 69){
+document.getElementById("h3").innerHTML = "";
+}
+document.getElementById("bar").value = b; 
+document.getElementById("h2").innerHTML = b + "%";
+if(b <=99){
+b++};
+if(b == 99){
+document.getElementById("h2").innerHTML ="";
+document.getElementById("h3").innerHTML ="";
+document.getElementById("h1").innerHTML ="";
+if(b == 99){
+document.getElementById("h2").innerHTML ="";
+document.getElementById("h3").innerHTML ="";
+document.getElementById("h11").innerHTML ="Complete";
+document.getElementById("gif").src ="Adam1.jpg";
+document.getElementById("gif").style.opacity ="100%";
+document.getElementById("adam").innerHTML ="SEXXXY";
+
+}
+}
+};
+</script>
+</body>
+</html> 
